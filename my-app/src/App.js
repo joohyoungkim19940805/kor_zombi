@@ -12,20 +12,20 @@ function App() {
   const [user, setUser] = useState({})
   const [users, setUsers] = useState([])
   const [numberOfUsers, setNumberOfUsers] = useState(0)
-
-
+  console.log(useState(0))
+  console.log(numberOfUsers);
+  console.log(setNumberOfUsers);
+  
   const userCreate = (e) => {
 
-      createUser(user)
-        .then(response => {
+      createUser(user).then(response => {
           console.log(response);
           setNumberOfUsers(numberOfUsers+1)
       });
   }
 
   const fetchAllUsers = () => {
-    getAllUsers()
-      .then(users => {
+    getAllUsers().then(users => {
         console.log(users)
         setUsers(users);
         setNumberOfUsers(users.length)
@@ -33,8 +33,7 @@ function App() {
   }
 
   useEffect(() => {
-    getAllUsers()
-      .then(users => {
+    getAllUsers().then(users => {
         console.log(users)
         setUsers(users);
         setNumberOfUsers(users.length)
