@@ -8,18 +8,15 @@ import CreateUser from './components/CreateUser'
 import { getAllUsers, createUser } from './services/UserService'
 
 function App() {
-
+  
+/*
   const [user, setUser] = useState({})
   const [users, setUsers] = useState([])
   const [numberOfUsers, setNumberOfUsers] = useState(0)
-  console.log(useState(0))
-  console.log(numberOfUsers);
-  console.log(setNumberOfUsers);
-  
+
   const userCreate = (e) => {
 
       createUser(user).then(response => {
-          console.log(response);
           setNumberOfUsers(numberOfUsers+1)
       });
   }
@@ -80,5 +77,6 @@ function App() {
         </div>
     );
 }
+*/
 
 export default App;
