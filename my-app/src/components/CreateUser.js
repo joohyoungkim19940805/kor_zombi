@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const CreateUser = ({onChangeForm, createUser }) => {
+const CreateUser = ({onChangeForm, createUser, removeUser }) => {
 
 
     return(
@@ -27,6 +27,7 @@ const CreateUser = ({onChangeForm, createUser }) => {
                         </div>
                     </div>
                     <button type="button" onClick= {(e) => createUser()} className="btn btn-danger">Create</button>
+                    <button type="button" onClick={(e) => removeUser()} className="btn btn-remove">Remove</button>
                 </form>
                 </div>
             </div>

@@ -1,0 +1,10 @@
+div.menu {
+    text-align: center;
+    margin: 0;padding: 1.5%;
+}
+
+input.menu_button {
+    width: 50%;
+    height: auto;
+    line-height: 295%;
+}
