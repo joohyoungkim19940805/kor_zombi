@@ -8,12 +8,12 @@ import {getAllMeun} from './services/UserService'
 function App() {
   
   const [menu, setMenu] = useState([]);
-  const [menu_flog, setMenu_flog] = useState({});
+  //const [menu_flog, setMenu_flog] = useState({});
   useEffect(()=>{
     getAllMeun().then(res=>{
       setMenu(res)
     });
-  },0)
+  },[])
   /*
   const [user, setUser] = useState({})
   const [users, setUsers] = useState([])

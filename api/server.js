@@ -20,14 +20,13 @@ async function run (queryString, callBack){
       console.error('Error connecting to pg server' + err.stack);
     }
     else{
-      console.log('start<<<<<<');
       client.query(queryString,(err,res)=>{
         let result;
         if(err){
           console.error('Error executing query on pg db' + err.stack);
           result = err
         }else{
-          console.log('results query :' + res.rows.length);
+          console.log('query results count :' + res.rows.length);
           result = res.rows
         }
         client.release();
@@ -41,9 +40,9 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../my-app/build')));
 
 app.get('/api/menu', (req,res) =>{
-  console.log('checkr<<<><');
   run('select * from main_menu order by menu_idx asc', (e)=>{console.log(e);res.json(e);});
 });
+
 
 app.get('/api/users', (req, res) => {
   console.log('api/users called!')
